@@ -1,0 +1,33 @@
+[
+  {
+    "id": 1,
+    "title": "From Data Science to Web Development",
+    "date": "May 28, 2023",
+    "readTime": "7 min read",
+    "description": "How my journey in data science led me to web development and the synergies between these fields.",
+    "slug": "data-science-to-web-dev",
+    "image": "https://picsum.photos/200/300",
+    "readMoreLink": "https://www.nobledesktop.com/classes-near-me/blog/web-app-development-for-data-scientists#:~:text=Moving%20from%20data%20science%20to%20web%20application%20development%20requires%20data,to%20learning%20web%20application%20tools."
+  },
+  {
+    "id": 2,
+    "title": "Building Your First ML Model",
+    "date": "June 15, 2023",
+    "readTime": "5 min read",
+    "description": "A step-by-step guide to creating your first machine learning model using Python and Scikit-learn.",
+    "slug": "building-first-ml-model",
+    "image": "https://picsum.photos/200/300",
+    "readMoreLink": "https://www.seldon.io/how-to-build-a-machine-learning-model-2/"
+  },
+  {
+    "id": 3,
+    "title": "Try React",
+    "date":"August 5, 2023",
+    "readTime": "4 min read",
+    "description": "Learn the fundamentals of CSS Grid layout for modern web design.",
+    "slug": "building-first-ml-model",
+    "image": "https://picsum.photos/200/300",
+    "readMoreLink": "https://react.dev/learn"
+  }
+  
+]
