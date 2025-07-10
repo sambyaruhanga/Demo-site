@@ -136,6 +136,7 @@ const DataAnalysis = () => {
       'Azure': { icon: 'fab fa-microsoft', colorClass: 'text-blue-700' },
       'Tableau': { icon: 'fas fa-chart-bar', colorClass: 'text-blue-800' },
       'R': { icon: 'fas fa-r-project', colorClass: 'text-blue-400' },
+      'GitHub': { icon: 'fab fa-github', colorClass: 'text-gray-800' },
       'Scikit-learn': { icon: 'fas fa-chart-line', colorClass: 'text-orange-500' },
       'Snowflake': { icon: 'fas fa-snowflake', colorClass: 'text-blue-400' },
       'Spark': { icon: 'fas fa-bolt', colorClass: 'text-orange-600' },

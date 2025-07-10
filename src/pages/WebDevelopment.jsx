@@ -20,7 +20,7 @@ const WebDevelopment = () => {
           title: 'Portfolio Website',
           image: portfolioImage,
           description: 'Designed a modern portfolio site with smooth animations and contact form integration.',
-          technologies: ['React','TailwindCSS','JavaScript','Vite'],
+          technologies: ['React','TailwindCSS','JavaScript','Vite','GitHub'],
           features: [
             'Interactive animations',
             'Responsive design',
@@ -101,6 +101,7 @@ const WebDevelopment = () => {
       'Firebase': { icon: 'fas fa-fire', colorClass: 'text-yellow-400' },
       'Redux': { icon: 'fas fa-code-branch', colorClass: 'text-purple-500' },
       'Material UI': { icon: 'fas fa-boxes', colorClass: 'text-blue-600' },
+      'GitHub': { icon: 'fab fa-github', colorClass: 'text-gray-800' },
       'TypeScript': { icon: 'fas fa-code', colorClass: 'text-blue-600' },
       'Express': { icon: 'fab fa-node-js', colorClass: 'text-gray-700' },
       'Chart.js': { icon: 'fas fa-chart-bar', colorClass: 'text-red-500' },

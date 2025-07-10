@@ -217,6 +217,7 @@ const MachineLearning = () => {
     'Kafka Connect': { icon: 'fas fa-plug', colorClass: 'text-gray-900' },
     'Plotly': { icon: 'fas fa-chart-line', colorClass: 'text-blue-800' },
     'Neural Networks': { icon: 'fas fa-network-wired', colorClass: 'text-orange-600' },
+    'GitHub': { icon: 'fab fa-github', colorClass: 'text-gray-800' },
     'Redis': { icon: 'fas fa-memory', colorClass: 'text-red-600' },
     'Canvas API': { icon: 'fas fa-paint-brush', colorClass: 'text-blue-600' },
     'CRM': { icon: 'fas fa-users', colorClass: 'text-indigo-500' },
