@@ -125,7 +125,7 @@ const WebDevelopment = () => {
               {category.projects.map((project) => (
                 <div key={project.id} className="project-card bg-white rounded-lg shadow-lg p-6">
                   <div className="w-full h-48 bg-gray-200 rounded mb-4 flex items-center justify-center">
-                    <img src={project.image} alt={project.title} className="w-full h-48 object-cover rounded mb-4" />
+                    <img src={project.image} alt={project.title} className="w-full h-full object-cover"/>
                   </div>
                   <h3 className="text-xl font-bold mb-2">{project.title}</h3>
                   <p className="text-gray-700 mb-4">{project.description}</p>
