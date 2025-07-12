@@ -6,6 +6,11 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 
 library.add(fas, fab);
 
+// Importing images 
+import COVID_Starter from '../assets/images/COVID_Starter.png';
+import Business_Analytics from '../assets/images/Business-Analytics-Dashboard.png';
+
+
 const DataAnalysis = () => {
   const data = [
     // 1. Data Visualization
@@ -15,9 +20,9 @@ const DataAnalysis = () => {
         {
           id: 1,
           title: 'Interactive Dashboard for Sales Analytics',
-          image: '',
+          image: Business_Analytics,
           description: 'Created an interactive dashboard that visualizes sales performance across regions and product categories with drill-down capabilities.',
-          technologies: ['Python', 'D3.js', 'Plotly', 'Pandas', 'Flask'],
+          technologies: ['Python','Plotly', 'Pandas', 'PowerBI'],
           features: [
             'Real-time data updates from multiple sources',
             'Customizable views for different user roles',
@@ -30,9 +35,9 @@ const DataAnalysis = () => {
         {
           id: 2,
           title: 'COVID-19 Trend Analysis Dashboard',
-          image: '',
+          image: COVID_Starter,
           description: 'Developed a public-facing dashboard tracking COVID-19 cases, vaccinations, and trends with geospatial visualization.',
-          technologies: ['JavaScript', 'Leaflet.js', 'Chart.js', 'Python', 'AWS'],
+          technologies: ['Python','Plotly', 'Pandas', 'Tableau'],
           features: [
             'Animated time-series visualizations',
             'County-level granularity',
@@ -41,80 +46,6 @@ const DataAnalysis = () => {
           ],
           lessons: 'Learned how to handle and visualize rapidly changing public health data effectively.',
           useCase: 'Public health monitoring, government agencies, and research institutions.',
-        }
-      ]
-    },
-
-    // 2. Business Intelligence
-    {
-      topic: "Business Intelligence Projects",
-      projects: [
-        {
-          id: 1,
-          title: 'Retail Inventory Optimization System',
-          image: '',
-          description: 'Built a BI solution that analyzes sales patterns to optimize inventory levels across 200+ retail locations.',
-          technologies: ['Power BI', 'SQL', 'Python', 'Azure', 'Tableau'],
-          features: [
-            'Reduced overstock by 35% while maintaining 99% availability',
-            'Automated reorder recommendations',
-            'Seasonal demand forecasting',
-            'Integration with ERP systems'
-          ],
-          lessons: 'Learned how to balance data granularity with performance in large-scale BI systems.',
-          useCase: 'Retail chains, warehouse management, and supply chain optimization.',
-        },
-        {
-          id: 2,
-          title: 'Customer Segmentation Platform',
-          image: '',
-          description: 'Developed a clustering-based segmentation system that identifies high-value customer cohorts.',
-          technologies: ['R', 'Tableau', 'SQL', 'Scikit-learn', 'Snowflake'],
-          features: [
-            'RFM (Recency, Frequency, Monetary) analysis',
-            'Dynamic segmentation updates',
-            'Integration with marketing automation',
-            'Lifetime value prediction'
-          ],
-          lessons: 'Learned the importance of explainable models in business-facing analytics.',
-          useCase: 'Marketing teams, e-commerce platforms, and customer relationship management.',
-        }
-      ]
-    },
-
-    // 3. Big Data Analytics
-    {
-      topic: "Big Data Analytics Projects",
-      projects: [
-        {
-          id: 1,
-          title: 'Clickstream Analysis Pipeline',
-          image: '',
-          description: 'Implemented a system to process and analyze 10TB+ of daily clickstream data from e-commerce platforms.',
-          technologies: ['Spark', 'Hadoop', 'Kafka', 'Python', 'AWS EMR'],
-          features: [
-            'Real-time session tracking',
-            'Conversion funnel analysis',
-            'Anomaly detection for bot traffic',
-            'Personalization recommendations'
-          ],
-          lessons: 'Learned cost-effective strategies for processing high-volume, low-latency data streams.',
-          useCase: 'E-commerce, digital marketing, and user experience optimization.',
-        },
-        {
-          id: 2,
-          title: 'IoT Sensor Data Analytics',
-          image: '',
-          description: 'Created a platform to analyze sensor data from industrial equipment to predict maintenance needs.',
-          technologies: ['PySpark', 'TensorFlow', 'Kafka', 'Grafana', 'InfluxDB'],
-          features: [
-            'Real-time anomaly detection',
-            'Predictive maintenance alerts',
-            'Equipment health scoring',
-            'Integration with field service systems'
-          ],
-          lessons: 'Learned how to handle and clean noisy sensor data effectively.',
-          useCase: 'Manufacturing, energy sector, and industrial equipment monitoring.',
         }
       ]
     }

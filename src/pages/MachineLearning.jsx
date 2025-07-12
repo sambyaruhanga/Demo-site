@@ -7,11 +7,18 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 
+
 // Add all icons to the library so you can use them without importing them individually
 library.add(fas, fab);
 
 // Importing images 
-import creditScoring from '../assets/images/creditScoring.png';
+import ETL_Pipeline from '../assets/images/ETL_Pipeline.png';
+import DataMining from'../assets/images/DataMining.webp'
+import Behavioral_credit_scoring from'../assets/images/Behavioral_credit_scoring.png'
+import ApplicationScoreCard from'../assets/images/Application ScoreCard.png'
+import Sentiment from'../assets/images/Sentiment Analysis Engine.jpg'
+import Chatbot from'../assets/images/Chatbot for Customer Support.png'
+
 
 const MachineLearning = () => {
 
@@ -24,9 +31,9 @@ const MachineLearning = () => {
         {
           id: 1,
           title: 'Real-time ETL Pipeline',
-          image:creditScoring, // Add your image path here
+          image:ETL_Pipeline, // Add your image path here
           description: 'Designed a scalable real-time ETL pipeline that processes and transforms data from multiple sources into a unified postgreSQL database, enabling real-time analytics. Case study of crypto trading data from Binance API.',
-          technologies: ['Airflow', 'Python', 'Docker','PostgreSQL'],
+          technologies: ['Airflow', 'Python', 'Docker','PostgreSQL','PySpark','FastAPI'],
           features: [
             'API integration for real-time data ingestion',
             'ETL process with Apache Airflow',
@@ -36,19 +43,21 @@ const MachineLearning = () => {
           useCase: 'Ideal for data warehousing, analytics, and real-time reporting.',
         },
         // Example 2 project
-         {
+        {
           id: 2,
-          title: 'Real-time ETL Pipeline',
-          image:'', // Add your image path here
-          description: 'description test',
-          technologies: ['Apache Kafka', 'Spark', 'Airflow', 'Python', 'AWS S3'],
+          title: 'Customer Segmentation Using Data Mining',
+          image: DataMining, // Replace with actual image path or asset
+          description: 'Developed a data mining solution to segment customers based on purchasing behavior using unsupervised learning techniques. The goal was to discover hidden patterns and improve targeted marketing strategies.',
+          technologies: ['Python', 'Scikit-learn', 'Pandas', 'Matplotlib', 'Seaborn', 'K-Means Clustering', 'Jupyter Notebook'],
           features: [
-            'Processes 10M+ events/day with <100ms latency',
-            'Auto-scaling based on workload',
-            'End-to-end monitoring with Prometheus'
+            'Performed data cleaning and preprocessing on customer transaction data',
+            'Applied K-Means clustering for behavioral segmentation',
+            'Visualized customer clusters using PCA and t-SNE',
+            'Extracted actionable insights for marketing team',
+            'Validated clustering performance using silhouette scores'
           ],
-          lessons: 'Learned the importance of backpressure handling and proper partitioning strategies.',
-          useCase: 'Ideal for IoT data processing, financial transactions, and real-time analytics.',
+          lessons: 'Gained practical experience in unsupervised learning, feature engineering, cluster analysis, and interpreting high-dimensional data in real business contexts.',
+          useCase: 'Ideal for eCommerce platforms or retail businesses looking to enhance customer targeting, loyalty programs, and personalized product recommendations.'
         }
       ]
     },
@@ -61,7 +70,7 @@ const MachineLearning = () => {
         {
           id: 1,
           title: 'Application Credit Scoring  Model',
-          image: '', // Add your image path here
+          image: ApplicationScoreCard, // Add your image path here
           description: 'Developed a predictive model that assesses creditworthiness using alternative data sources and behavioral patterns, enabling financial inclusion for underserved populations with 85%+ accuracy.',
           technologies: ['Python', 'TensorFlow', 'Scikit-learn', 'Flask', 'Docker'],
           features: [
@@ -77,7 +86,7 @@ const MachineLearning = () => {
          {
           id: 2,
           title: 'Behavioral Credit Scoring  Model',
-          image:'', // Add your image path here
+          image:Behavioral_credit_scoring, // Add your image path here
           description: 'Built a model to predict customer churn with 90% accuracy, helping businesses retain valuable customers through targeted interventions.',
           technologies: ['Python', 'XGBoost', 'Pandas', 'FastAPI', 'AWS Lambda'],
           features: [
@@ -100,7 +109,7 @@ const MachineLearning = () => {
         {
           id: 1,
           title: 'Sentiment Analysis Engine',
-          image:'', // Add your image path here
+          image:Sentiment, // Add your image path here
           description: 'Developed a sentiment analysis engine that processes social media data to gauge public opinion on various topics.',
           technologies: ['Python', 'NLTK', 'TensorFlow', 'Flask'],
           features: [
@@ -115,7 +124,7 @@ const MachineLearning = () => {
          {
           id: 2,
           title: 'Chatbot for Customer Support',
-          image:'', // Add your image path here
+          image:Chatbot, // Add your image path here
           description: 'Built an AI-powered chatbot that provides instant customer support and resolves common queries.',
           technologies: ['Python', 'Rasa', 'FastAPI', 'MongoDB'],
           features: [
@@ -125,43 +134,6 @@ const MachineLearning = () => {
           ],
           lessons: 'Learned how to design conversational flows and handle user intents effectively.',
           useCase: 'Ideal for e-commerce platforms, service industries, and customer support automation.',
-        }
-      ]
-    },
-
-    //*4.Reinforcement Learning */}
-    {
-      topic: "Reinforcement Learning Projects",
-      projects: [
-        // Example 1 project 
-        {
-          id: 1,
-          title: 'Autonomous Drone Navigation',
-          image:'', // Add your image path here
-          description: 'Developed a reinforcement learning model that enables drones to navigate complex environments autonomously.',
-          technologies: ['Python', 'OpenAI Gym', 'TensorFlow', 'ROS'],
-          features: [
-            'Achieved 95% success rate in obstacle avoidance',
-            'Real-time path planning with dynamic environment adaptation',
-            'Simulated training environment for safe learning'
-          ],
-          lessons: 'Learned the importance of reward shaping and exploration strategies in RL.',
-          useCase: 'Ideal for robotics, autonomous vehicles, and drone applications.',
-        },
-        // Example 2 project
-         {
-          id: 2,
-          title: 'Stock Trading Bot',
-          image:'', // Add your image path here
-          description: 'Built a trading bot that uses reinforcement learning to optimize stock trading strategies.',
-          technologies: ['Python', 'Keras', 'Pandas', 'Backtrader'],
-          features: [
-            'Outperformed benchmark indices by 15%',
-            'Adaptive learning based on market conditions',
-            'Integrated with live trading platforms'
-          ],
-          lessons: 'Learned how to balance exploration vs exploitation in financial markets.',
-          useCase: 'Ideal for algorithmic trading, investment strategies, and financial analytics.',
         }
       ]
     }
@@ -240,7 +212,7 @@ const MachineLearning = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
               {category.projects.map((project) => (
                 <div key={project.id} className="project-card bg-white rounded-lg shadow-lg p-6">
-                  <img src={project.image} alt={project.title} className="w-full h-48 object-cover rounded mb-4" />
+                  <img src={project.image} alt={project.title} className="w-full object-contain rounded mb-4 transition-transform duration-500 hover:scale-105"/>
                   <h3 className="text-xl font-bold mb-2">{project.title}</h3>
                   <p className="text-gray-700 mb-4">{project.description}</p>
                   

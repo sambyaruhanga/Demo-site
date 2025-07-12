@@ -7,7 +7,7 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 library.add(fas, fab);
 
 //import images
-import portfolioImage from '../assets/images/PortfolioWebsite.png';
+import pojectImage from '../assets/images/PortfolioWebsite.png';
 
 const WebDevelopment = () => {
   const data = [
@@ -18,7 +18,7 @@ const WebDevelopment = () => {
         {
           id: 1,
           title: 'Portfolio Website',
-          image: portfolioImage,
+          image: pojectImage,
           description: 'Designed a modern portfolio site with smooth animations and contact form integration.',
           technologies: ['React','TailwindCSS','JavaScript','Vite','GitHub'],
           features: [
@@ -34,7 +34,7 @@ const WebDevelopment = () => {
          {
           id: 2,
           title: 'E-Commerce Website',
-          image: '',
+          image: pojectImage,
           description: 'Developed a responsive e-commerce site with product filtering, cart functionality, and secure checkout.',
           technologies: ['React', 'Next.js', 'TailwindCSS', 'Stripe', 'Node.js'],
           features: [
@@ -45,43 +45,6 @@ const WebDevelopment = () => {
           ],
           lessons: 'Learned optimization techniques for faster page loads and better SEO.',
           useCase: 'Ideal for online retailers and small businesses.',
-        }
-      ]
-    },
-
-    // 2. Web Applications
-    {
-      topic: "Web Application Projects",
-      projects: [
-        {
-          id: 1,
-          title: 'Task Management App',
-          image: '',
-          description: 'Built a collaborative task manager with real-time updates and team permissions.',
-          technologies: ['React', 'Firebase', 'Redux', 'Material UI'],
-          features: [
-            'Real-time sync across devices',
-            'Drag-and-drop interface',
-            'User role management',
-            'Offline capability'
-          ],
-          lessons: 'Learned real-time data synchronization and conflict resolution.',
-          useCase: 'Teams needing collaborative task tracking.',
-        },
-        {
-          id: 2,
-          title: 'API Dashboard',
-          image: '',
-          description: 'Created a monitoring dashboard for API services with analytics and alerting.',
-          technologies: ['TypeScript', 'Express', 'Chart.js', 'Docker'],
-          features: [
-            'Live API health monitoring',
-            'Custom alert thresholds',
-            'Historical performance data',
-            'JWT authentication'
-          ],
-          lessons: 'Gained experience in WebSocket connections and data visualization.',
-          useCase: 'Developers monitoring backend services.',
         }
       ]
     }
@@ -116,62 +79,47 @@ const WebDevelopment = () => {
     <section className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
       <div className="max-w-6xl mx-auto px-4 py-8">
         <h1 className="text-4xl font-bold text-center mb-8">Web Development Projects</h1>
-        
+
         {data.map((category, index) => (
-          <div key={index} className="mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 items-center">
-              <span className="gradient-text">{category.topic}</span>
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {category.projects.map((project) => (
-                <div key={project.id} className="project-card bg-white rounded-lg shadow-lg p-6">
-                  <div className="w-full h-48 bg-gray-200 rounded mb-4 flex items-center justify-center">
-                    <img src={project.image} alt={project.title} className="w-full h-full object-cover"/>
-                  </div>
-                  <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                  <p className="text-gray-700 mb-4">{project.description}</p>
-                  
-                  <div className="mb-4">
-                    <h4 className="font-semibold text-gray-700 mb-2">Technologies:</h4>
-                    <div className="flex flex-wrap">
-                      {project.technologies.map((tech, idx) => {
-                        const { icon, colorClass } = getTechIcon(tech);
-                        const [prefix, iconName] = icon.split(' ');
-                        return (
-                          <span key={idx} className="tech-tag inline-flex items-center bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium m-1 border border-gray-200 mr-1">
-                            <FontAwesomeIcon 
-                              icon={[prefix.replace('fa-', ''), iconName.replace('fa-', '')]} 
-                              className={`${colorClass} mr-1`} 
-                            />
-                            <span className="text-gray-700">{tech}</span>
-                          </span>
-                        );
-                      })}
+                  <div key={index} className="mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4  items-center"><span class="gradient-text">{category.topic}</span></h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+                      {category.projects.map((project) => (
+                        <div key={project.id} className="project-card bg-white rounded-lg shadow-lg p-6">
+                          <img src={project.image} alt={project.title} className="w-full object-contain rounded mb-4 transition-transform duration-500 hover:scale-105"/>
+                          <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+                          <p className="text-gray-700 mb-4">{project.description}</p>
+                          
+                          <div className="mb-4">
+                            <h4 class="font-semibold text-gray-700 mb-2">Tools & Frameworks:</h4>
+                            {project.technologies.map((tech, idx) => {
+                              const { icon, colorClass } = getTechIcon(tech);
+                              const [prefix, iconName] = icon.split(' ');
+                              return (
+                              <span key={idx} className="tech-tag inline-flex items-center bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium m-1 border border-gray-200 mr-1">
+                                <FontAwesomeIcon 
+                                icon={[prefix.replace('fa-', ''), iconName.replace('fa-', '')]} 
+                                className={`${colorClass} mr-1`} 
+                                />
+                                <span className="text-gray-700">{tech}</span>
+                                </span>
+                                );})}
+                          </div>
+                          <h4 className="font-semibold text-gray-700 mb-2">Key Features:</h4>
+                          <ul className="list-disc list-inside mb-4">
+                            {project.features.map((feature, idx) => (
+                              <li key={idx} className="text-gray-600">{feature}</li>
+                            ))}
+                          </ul>
+                          <h4 class="font-semibold text-gray-700 mb-2">Lessons Learned:</h4>
+                          <p className="text-gray-600 italic mb-4">{project.lessons}</p>
+                          <h4 class="font-semibold text-gray-700 mb-2">Use Case:</h4>
+                          <p className="text-gray-600">{project.useCase}</p>
+                        </div>
+                      ))}
                     </div>
                   </div>
-                  
-                  <h4 className="font-semibold text-gray-700 mb-2">Features:</h4>
-                  <ul className="list-disc list-inside mb-4">
-                    {project.features.map((feature, idx) => (
-                      <li key={idx} className="text-gray-600">{feature}</li>
-                    ))}
-                  </ul>
-                  
-                  <div className="space-y-2">
-                    <div>
-                      <h4 className="font-semibold text-gray-700">Lessons:</h4>
-                      <p className="text-gray-600 italic">{project.lessons}</p>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-700">Use Case:</h4>
-                      <p className="text-gray-600">{project.useCase}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        ))}
+                ))}
       </div>
     </section>
   );
